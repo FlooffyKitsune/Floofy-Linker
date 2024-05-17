@@ -39,7 +39,7 @@
             username,
             photoURL: $user?.photoURL ?? null,
             published: true,
-            bio: 'I am the Walrus',
+            bio: 'No bio yet...',
             links: [
                 {
                     title: 'Test Link',
