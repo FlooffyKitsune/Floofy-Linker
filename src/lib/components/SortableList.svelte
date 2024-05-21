@@ -1,53 +1,60 @@
 <script lang="ts">
-    import { flip } from "svelte/animate";
-    import { createEventDispatcher } from "svelte";
+  import { flip } from "svelte/animate";
+  import { createEventDispatcher } from "svelte";
 
-    export let list: any[];
-    let isOver: string | boolean = false;
+  interface Item {
+    id: string;
+    index: number;
+    [key: string]: any;
+  }
 
-    const dispatch = createEventDispatcher();
+  export let list: any[];
+  let isOver: string | boolean = false;
 
-    function getDraggedParent(node: any) {
-        if (!node.dataset.index) {
-            return getDraggedParent(node.parentNode);
-        } else {
-            return { ...node.dataset };
-        }
+  const dispatch = createEventDispatcher();
+
+
+  function getDraggedParent(node: any): Item {
+    if (!node.dataset.index) {
+      return getDraggedParent(node.parentNode);
+    } else {
+      return { ...node.dataset } as Item;
     }
+  }
 
-    function onDragStart(e: DragEvent) {
-        // @ts-ignore
-        const dragged = getDraggedParent(e.target);
-        e.dataTransfer?.setData("source", dragged?.index.toString());
-    }
+  function onDragStart(e: DragEvent) {
+    // @ts-ignore
+    const dragged = getDraggedParent(e.target);
+    e.dataTransfer?.setData("source", dragged?.index.toString());
+  }
 
-    function onDragOver(e: DragEvent) {
-        // @ts-ignore
-        const id = e.target.dataset?.id;
-        const dragged = getDraggedParent(e.target);
-        isOver = dragged?.id ?? false;
-    }
+  function onDragOver(e: DragEvent) {
+    // @ts-ignore
+    const id = e.target.dataset?.id;
+    const dragged = getDraggedParent(e.target);
+    isOver = dragged?.id ?? false;
+  }
 
-    function onDragLeave(e: DragEvent) {
-        const dragged = getDraggedParent(e.target);
-        isOver === dragged.id && (isOver = false);
-    }
+  function onDragLeave(e: DragEvent) {
+    const dragged = getDraggedParent(e.target);
+    isOver === dragged.id && (isOver = false);
+  }
 
-    function onDrop(e: DragEvent) {
-        isOver = false;
-        const dragged = getDraggedParent(e.target);
-        reorder({
-            from: e.dataTransfer?.getData("source"),
-            to: dragged.index,
-        });
-    }
+  function onDrop(e: DragEvent) {
+    isOver = false;
+    const dragged = getDraggedParent(e.target);
+    reorder({
+      from: e.dataTransfer?.getData("source"),
+      to: dragged.index,
+    });
+  }
 
-    const reorder = ({ from, to }: any) => {
-        const newList = [...list];
-        newList[from] = [newList[to], (newList[to] = newList[from])][0];
+  const reorder = ({ from, to }: any) => {
+    const newList = [...list];
+    newList[from] = [newList[to], (newList[to] = newList[from])][0];
 
-        dispatch("sort", newList);
-    }
+    dispatch("sort", newList);
+  };
 </script>
 
 {#if list?.length}

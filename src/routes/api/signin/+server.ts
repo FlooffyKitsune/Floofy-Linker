@@ -3,8 +3,11 @@ import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
 export const POST: RequestHandler = async ({ request, cookies }) => {
+
     const { idToken } = await request.json();
-    const expiresIn = 60 * 60 * 24 * 7 * 1000;
+
+    const expiresIn = 60 * 60 * 24 * 5 * 1000; // 5 days
+
     const decodedIdToken = await adminAuth.verifyIdToken(idToken);
 
     if (new Date().getTime() / 1000 - decodedIdToken.auth_time < 5 * 60) {
@@ -15,8 +18,10 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
 
         return json({ status: 'signedIn' });
     } else {
-        throw error(401, 'Recen sign in required!');
+        throw error(401, 'Recent sign in required!');
     }
+
+
 };
 
 export const DELETE: RequestHandler = async ({ cookies }) => {
