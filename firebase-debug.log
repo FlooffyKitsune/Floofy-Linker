@@ -1,0 +1,180 @@
+[debug] [2024-05-21T18:50:39.101Z] ----------------------------------------------------------------------
+[debug] [2024-05-21T18:50:39.104Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\floof\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-05-21T18:50:39.104Z] CLI Version:   13.9.0
+[debug] [2024-05-21T18:50:39.104Z] Platform:      win32
+[debug] [2024-05-21T18:50:39.104Z] Node Version:  v20.11.1
+[debug] [2024-05-21T18:50:39.104Z] Time:          Tue May 21 2024 14:50:39 GMT-0400 (Eastern Daylight Time)
+[debug] [2024-05-21T18:50:39.104Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-21T18:50:39.162Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-21T18:50:39.163Z] > authorizing via signed-in user (jarrettdominic@gmail.com)
+[debug] [2024-05-21T18:50:39.163Z] [iam] checking project flooffy-linker for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-21T18:50:39.165Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/flooffy-linker:testIamPermissions [none]
+[debug] [2024-05-21T18:50:39.165Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/flooffy-linker:testIamPermissions x-goog-quota-user=projects/flooffy-linker
+[debug] [2024-05-21T18:50:39.165Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/flooffy-linker:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-21T18:50:39.339Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/flooffy-linker:testIamPermissions 200
+[debug] [2024-05-21T18:50:39.339Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/flooffy-linker:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-21T18:50:39.340Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/flooffy-linker [none]
+[debug] [2024-05-21T18:50:39.601Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/flooffy-linker 200
+[debug] [2024-05-21T18:50:39.602Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/flooffy-linker {"projectId":"flooffy-linker","projectNumber":"1018248969755","displayName":"Flooffy-Linker","name":"projects/flooffy-linker","resources":{"hostingSite":"flooffy-linker","storageBucket":"flooffy-linker.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_cce83b43-9664-44c0-99e4-735c44608952"}
+[debug] [2024-05-21T18:50:42.676Z] defaultcredentials: writing to file C:\Users\floof\AppData\Roaming\firebase\jarrettdominic_gmail_com_application_default_credentials.json
+[debug] [2024-05-21T18:50:42.678Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/flooffy-linker/sites pageToken=&pageSize=10
+[debug] [2024-05-21T18:50:43.323Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/flooffy-linker/sites 200
+[debug] [2024-05-21T18:50:43.323Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/flooffy-linker/sites {"sites":[{"name":"projects/flooffy-linker/sites/flooffy-linker","defaultUrl":"https://flooffy-linker.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-05-21T18:50:43.324Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/flooffy-linker/sites 
+[debug] [2024-05-21T18:50:43.771Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/flooffy-linker/sites 200
+[debug] [2024-05-21T18:50:43.771Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/flooffy-linker/sites {"sites":[{"name":"projects/flooffy-linker/sites/flooffy-linker","defaultUrl":"https://flooffy-linker.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-05-21T18:50:43.771Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/flooffy-linker/webApps/-/config [none]
+[debug] [2024-05-21T18:50:44.181Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/flooffy-linker/webApps/-/config 200
+[debug] [2024-05-21T18:50:44.181Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/flooffy-linker/webApps/-/config {"projectId":"flooffy-linker","appId":"1:1018248969755:web:84367fcddfe5602ccb82be","storageBucket":"flooffy-linker.appspot.com","locationId":"us-central","apiKey":"AIzaSyAx1I6EeFoN6Pf6AKKRSZGK2glbabL843I","authDomain":"flooffy-linker.firebaseapp.com","messagingSenderId":"1018248969755","measurementId":"G-LD4PEGL1Z0"}
+[info] 
+   Thank you for trying our experimental support for SvelteKit on Firebase Hosting.
+   While this integration is maintained by Googlers it is not a supported Firebase product.
+   Issues filed on GitHub will be addressed on a best-effort basis by maintainers and other community members.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/frameworks-overview
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-05-21T18:50:57.949Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "us-central1"
+      },
+      "site": "flooffy-linker",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": {
+            "functionId": "ssrflooffylinker",
+            "region": "us-central1",
+            "pinTag": true
+          }
+        }
+      ],
+      "redirects": [],
+      "headers": [
+        {
+          "source": "**/*.[jt]s",
+          "headers": [
+            {
+              "key": "Set-Cookie",
+              "value": "__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoiZmxvb2ZmeS1saW5rZXIiLCJhcHBJZCI6IjE6MTAxODI0ODk2OTc1NTp3ZWI6ODQzNjdmY2RkZmU1NjAyY2NiODJiZSIsInN0b3JhZ2VCdWNrZXQiOiJmbG9vZmZ5LWxpbmtlci5hcHBzcG90LmNvbSIsImxvY2F0aW9uSWQiOiJ1cy1jZW50cmFsIiwiYXBpS2V5IjoiQUl6YVN5QXgxSTZFZUZvTjZQZjZBS0tSU1pHSzJnbGJhYkw4NDNJIiwiYXV0aERvbWFpbiI6ImZsb29mZnktbGlua2VyLmZpcmViYXNlYXBwLmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiMTAxODI0ODk2OTc1NSIsIm1lYXN1cmVtZW50SWQiOiJHLUxENFBFR0wxWjAifSwiX2F1dGhUb2tlblN5bmNVUkwiOiIvX19zZXNzaW9uIn0; SameSite=Strict; Expires=2026-04-16T05:30:57.949Z; Path=/;"
+            }
+          ]
+        }
+      ],
+      "cleanUrls": true,
+      "public": ".firebase\\flooffy-linker\\hosting",
+      "webFramework": "svelekit_ssr"
+    }
+  ],
+  "functions": [
+    {
+      "source": ".firebase\\flooffy-linker\\functions",
+      "codebase": "firebase-frameworks-flooffy-linker"
+    }
+  ]
+}
+[debug] [2024-05-21T18:50:57.949Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-21T18:50:57.949Z] > authorizing via signed-in user (jarrettdominic@gmail.com)
+[debug] [2024-05-21T18:50:57.949Z] [iam] checking project flooffy-linker for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-05-21T18:50:57.949Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/flooffy-linker:testIamPermissions [none]
+[debug] [2024-05-21T18:50:57.950Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/flooffy-linker:testIamPermissions x-goog-quota-user=projects/flooffy-linker
+[debug] [2024-05-21T18:50:57.950Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/flooffy-linker:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-05-21T18:50:58.079Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/flooffy-linker:testIamPermissions 200
+[debug] [2024-05-21T18:50:58.080Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/flooffy-linker:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[info] 
+[info] === Deploying to 'flooffy-linker'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2024-05-21T18:50:58.081Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/flooffy-linker [none]
+[debug] [2024-05-21T18:50:58.289Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/flooffy-linker 200
+[debug] [2024-05-21T18:50:58.289Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/flooffy-linker {"projectId":"flooffy-linker","projectNumber":"1018248969755","displayName":"Flooffy-Linker","name":"projects/flooffy-linker","resources":{"hostingSite":"flooffy-linker","storageBucket":"flooffy-linker.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_cce83b43-9664-44c0-99e4-735c44608952"}
+[info] i  functions: preparing codebase firebase-frameworks-flooffy-linker for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-05-21T18:50:58.291Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-05-21T18:50:58.291Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/flooffy-linker
+[debug] [2024-05-21T18:50:58.292Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-05-21T18:50:58.292Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/flooffy-linker
+[debug] [2024-05-21T18:50:58.293Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/cloudbuild.googleapis.com [none]
+[debug] [2024-05-21T18:50:58.293Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/cloudbuild.googleapis.com x-goog-quota-user=projects/flooffy-linker
+[debug] [2024-05-21T18:50:58.293Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/artifactregistry.googleapis.com [none]
+[debug] [2024-05-21T18:50:58.293Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/artifactregistry.googleapis.com x-goog-quota-user=projects/flooffy-linker
+[debug] [2024-05-21T18:50:58.713Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/cloudfunctions.googleapis.com 200
+[debug] [2024-05-21T18:50:58.714Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-05-21T18:50:58.715Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/cloudbuild.googleapis.com 200
+[debug] [2024-05-21T18:50:58.716Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/cloudbuild.googleapis.com [omitted]
+[warn] !  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2024-05-21T18:50:58.716Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/cloudbuild.googleapis.com:enable [none]
+[debug] [2024-05-21T18:50:58.716Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/cloudbuild.googleapis.com:enable x-goog-quota-user=projects/flooffy-linker
+[debug] [2024-05-21T18:50:58.721Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/artifactregistry.googleapis.com 200
+[debug] [2024-05-21T18:50:58.722Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/artifactregistry.googleapis.com [omitted]
+[warn] !  artifactregistry: missing required API artifactregistry.googleapis.com. Enabling now... 
+[debug] [2024-05-21T18:50:58.723Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/artifactregistry.googleapis.com:enable [none]
+[debug] [2024-05-21T18:50:58.724Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/artifactregistry.googleapis.com:enable x-goog-quota-user=projects/flooffy-linker
+[debug] [2024-05-21T18:50:58.769Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/runtimeconfig.googleapis.com 200
+[debug] [2024-05-21T18:50:58.769Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-05-21T18:50:59.456Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/artifactregistry.googleapis.com:enable 200
+[debug] [2024-05-21T18:50:59.456Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/artifactregistry.googleapis.com:enable [omitted]
+[debug] [2024-05-21T18:50:59.472Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/cloudbuild.googleapis.com:enable 200
+[debug] [2024-05-21T18:50:59.472Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/cloudbuild.googleapis.com:enable [omitted]
+[debug] [2024-05-21T18:51:09.460Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/artifactregistry.googleapis.com [none]
+[debug] [2024-05-21T18:51:09.460Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/artifactregistry.googleapis.com x-goog-quota-user=projects/flooffy-linker
+[debug] [2024-05-21T18:51:09.475Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/cloudbuild.googleapis.com [none]
+[debug] [2024-05-21T18:51:09.475Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/cloudbuild.googleapis.com x-goog-quota-user=projects/flooffy-linker
+[debug] [2024-05-21T18:51:09.855Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/artifactregistry.googleapis.com 200
+[debug] [2024-05-21T18:51:09.855Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-05-21T18:51:09.867Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/cloudbuild.googleapis.com 200
+[debug] [2024-05-21T18:51:09.867Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/flooffy-linker/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-05-21T18:51:09.868Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/flooffy-linker/adminSdkConfig [none]
+[debug] [2024-05-21T18:51:10.258Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/flooffy-linker/adminSdkConfig 200
+[debug] [2024-05-21T18:51:10.258Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/flooffy-linker/adminSdkConfig {"projectId":"flooffy-linker","storageBucket":"flooffy-linker.appspot.com","locationId":"us-central"}
+[debug] [2024-05-21T18:51:10.259Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/flooffy-linker/configs [none]
+[debug] [2024-05-21T18:51:10.485Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/flooffy-linker/configs 200
+[debug] [2024-05-21T18:51:10.486Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/flooffy-linker/configs {}
+[debug] [2024-05-21T18:51:10.488Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2024-05-21T18:51:11.349Z] > [functions] package.json contents: {
+  "name": "floofy-linker",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "firebase": "^10.12.0",
+    "firebase-admin": "^12.1.0",
+    "svelte-routing": "^2.13.0",
+    "@sveltejs/kit": "^2.0.0",
+    "firebase-frameworks": "^0.11.0",
+    "firebase-functions": "^4.5.0"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "20"
+  }
+}
+[debug] [2024-05-21T18:51:11.349Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase firebase-frameworks-flooffy-linker to determine what to deploy 
+[debug] [2024-05-21T18:51:11.350Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-05-21T18:51:11.354Z] Found firebase-functions binary at 'C:\Users\floof\OneDrive\Documents\GitHub\Floofy-Linker\.firebase\flooffy-linker\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8379
+
+[debug] [2024-05-21T18:51:11.645Z] Got response from /__/functions.yaml {"endpoints":{"ssrflooffylinker":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-central1"],"labels":{},"httpsTrigger":{},"entryPoint":"ssrflooffylinker"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2024-05-21T18:51:16.703Z] Failed to validate key FIREBASE_SERVICE_ACCOUNT: Error: Key FIREBASE_SERVICE_ACCOUNT starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[error] Error: Failed to load environment variables from .env.:
+[error] - Error Key FIREBASE_SERVICE_ACCOUNT starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
